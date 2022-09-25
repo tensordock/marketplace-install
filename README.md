@@ -4,9 +4,11 @@ This is the code that hosts should run when they add a new machine to the Tensor
 
 ## Installing our software
 To use this, clone this Git repository and run the install script. 
-```git clone https://github.com/tensordock/marketplace-install
+```
+git clone https://github.com/tensordock/marketplace-install
 cd marketplace-install
-sudo bash install.sh```
+sudo bash install.sh
+```
 
 During the process, it'll ask you to confirm to install some packages. Here, respond "Y" for yes. 
 
