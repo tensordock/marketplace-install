@@ -15,6 +15,10 @@ During the process, it'll ask you to confirm to install some packages. Here, res
 It will also ask you for your network device. Network devices can be something along the lines of `enp4so, eth0, ens1, etc.` 
 Please copy and paste the network device information from another open session; it is easy to confuse the number one ("1") with a lowercase L ("l"), for example. 
 
+## Next steps
+Contact your TensorDock account manager with SSH credentials for them to verify that everything is operational and run tests :)
+The process of adding servers to our marketplace is still done manually at this time. 
+
 ## Copyright
 
 THIS CODE IS OWNED BY TENSORDOCK LLC. YOU ARE UNDER NO LICENSE TO USE THE CODE FOR YOUR OWN PURPOSES. JUST BECAUSE YOU CAN VIEW THE SOURCE DOES NOT MEAN IT IS NOT COPYRIGHTED. 
