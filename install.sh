@@ -55,7 +55,7 @@ echo "options kvm ignore_msrs=1" > /etc/modprobe.d/kvm.conf
 # Enable IP port forwarding
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 
-sudo apt install python3-pip nvme-cli
+sudo apt install python3-pip nvme-cli fail2ban
 pip3 install psutil
 python3 benchmark.py
 python3 microstackInit.py
