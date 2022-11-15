@@ -7,6 +7,9 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
+# Upgrade everything first
+sudo apt update && sudo apt upgrade -y
+
 echo "Welcome to the TensorDock Marketplace host installer."
 echo "This will take approximately 30 minutes."
 
@@ -55,7 +58,7 @@ echo "options kvm ignore_msrs=1" > /etc/modprobe.d/kvm.conf
 # Enable IP port forwarding
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 
-sudo apt install python3-pip nvme-cli fail2ban
+sudo apt install python3-pip nvme-cli fail2ban -y
 pip3 install psutil
 python3 benchmark.py
 python3 microstackInit.py
@@ -77,7 +80,7 @@ cat >> /etc/sudoers << EOF
 tensordock ALL=(ALL) NOPASSWD:ALL
 EOF
 
-sudo apt install iptables-persistent
+sudo apt install iptables-persistent -y
 sudo iptables -A INPUT -s 10.20.20.0/24 -d 192.168.0.0/16 -j DROP
 sudo iptables-save
 sudo sh -c "iptables-save > /etc/iptables/rules.v4"
