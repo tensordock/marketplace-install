@@ -40,7 +40,7 @@ IDS=`echo $IDS | tr ' ' ','`
 sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"\"/GRUB_CMDLINE_LINUX_DEFAULT=\"intel_iommu=on amd_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1 vfio-pci.ids=${IDS}\"/" /etc/default/grub
 
 # Now, we will put those IDs into the vfio conf file
-echo "options vfio-pci ids=${IDS} disable_vga=1" > /etc/modprobe.d/vfio.conf
+echo "options vfio-pci ids=${IDS} disable_vga=1 disable_idle_d3=1" > /etc/modprobe.d/vfio.conf
 
 # Now, let's add the vfio-pci module to the kernel
 cat <<EOF >> /etc/modules
